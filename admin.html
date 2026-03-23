@@ -13,31 +13,29 @@
 <!-- SIDEBAR -->
 <aside class="sidebar">
   <div class="sidebar-logo">
-    <div class="logo-emblem">
-      <span class="logo-letters">H</span>
+    <div class="">
+      <span class="logo"><img src="./img/HG STORE.png" alt="Logo da HG STORE"></span>
     </div>
-    <div class="logo-name">HG STORE</div>
-    <div class="logo-sub">Admin</div>
   </div>
   <div class="nav-section">
     <div class="nav-item active" id="nav-dashboard" onclick="goto('dashboard',this)">
-      <span class="nav-icon">⊞</span>
+      <span class="nav-icon"></span>
       <span>DASHBOARD</span>
     </div>
     <div class="nav-item" id="nav-produtos" onclick="goto('produtos',this)">
-      <span class="nav-icon">👟</span>
+      <span class="nav-icon"></span>
       <span>TODOS OS PRODUTOS</span>
     </div>
     <div class="nav-item" id="nav-pedidos" onclick="goto('pedidos',this)">
-      <span class="nav-icon">📋</span>
+      <span class="nav-icon"></span>
       <span>LISTA DE PEDIDOS</span>
     </div>
     <div class="nav-item" id="nav-usuarios" onclick="goto('usuarios',this)">
-      <span class="nav-icon">👤</span>
+      <span class="nav-icon"></span>
       <span>USUÁRIOS</span>
     </div>
     <div class="nav-item" id="nav-adicionar" onclick="goto('adicionar',this)">
-      <span class="nav-icon">＋</span>
+      <span class="nav-icon"></span>
       <span>ADICIONAR PRODUTO</span>
     </div>
   </div>
@@ -54,9 +52,9 @@
       <span>Dashboard</span>
     </div>
     <div class="topbar-right">
-      <div class="topbar-icon">🔍</div>
+      <div class="topbar-icon"><img src="./img/Search.png" alt="Lupa de pesquisa"></div>
       <div class="notif-wrap">
-        <div class="topbar-icon">🔔</div>
+        <div class="topbar-icon"><img src="./img/notifications.png" alt="sino de notificações"></div>
       <div class="notif-dot"></div>
     </div>
       <div class="admin-btn">
@@ -140,7 +138,7 @@
           <span>Todos os Produtos</span>
         </div>
       </div>
-      <button class="btn btn-gold" onclick="goto('adicionar',document.getElementById('nav-adicionar'))">⊕ ADD NOVO PRODUTO</button>
+      <button class="btn btn-gold" onclick="goto('adicionar',document.getElementById('nav-adicionar'))">ADICIONAR PRODUTO</button>
     </div>
     <div class="products-grid" id="prodGrid"></div>
   </div>
@@ -154,11 +152,11 @@
       </div>
     </div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-        <div class="date-badge">📅 Maio 16, 2025 — Julho 16, 2025</div>
+        <div class="date-badge">📅 Maio 16, 2026 — Julho 16, 2026</div>
         <select class="status-select">
           <option>Alterar status</option>
-          <option>Delivered</option>
-          <option>Canceled</option>
+          <option>Entregue</option>
+          <option>Cancelado</option>
           <option>Pendente</option>
         </select>
       </div>
@@ -199,7 +197,7 @@
           <span>Usuários</span>
         </div>
       </div>
-      <button class="btn btn-gold" onclick="openUserModal(-1)">＋ NOVO USUÁRIO</button>
+      <button class="btn btn-gold" onclick="openUserModal(-1)"> NOVO USUÁRIO</button>
     </div>
     <div class="card">
       <div class="card-header">
@@ -227,7 +225,12 @@
   <!-- ══ ADICIONAR PRODUTO ══ -->
   <div class="screen" id="screen-adicionar">
     <div class="page-header">
-      <div><div class="page-title">Adicionar Produto</div><div class="breadcrumb">Home &rsaquo; <span>Adicionar Produto</span></div></div>
+      <div>
+        <div class="page-title">Adicionar Produto</div>
+      <div class="breadcrumb">Home &rsaquo; 
+        <span>Adicionar Produto</span>
+      </div>
+    </div>
     </div>
     <div class="form-grid-2">
       <div class="card">
@@ -353,18 +356,16 @@
     <div class="form-group">
       <label class="form-label">Método de Pagamento</label>
       <select class="form-select" id="u-metodo">
-        <option>PayPal</option>
-        <option>Cash</option>
-        <option>Pioneer</option>
-        <option>Pix</option>
+        <option>Boleto</option>
+       <option>Pix</option>
         <option>Cartão</option>
       </select>
     </div>
     <div class="form-group">
       <label class="form-label">Status</label>
       <select class="form-select" id="u-status">
-        <option>Delivered</option>
-        <option>Canceled</option>
+        <option>Entregue</option>
+        <option>Cancelado</option>
         <option>Pendente</option>
       </select>
     </div>
