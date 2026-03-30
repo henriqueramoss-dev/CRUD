@@ -17,7 +17,7 @@ function goto(id,el){
 function closeModal(id){document.getElementById(id).classList.add('hidden')}
 
 // ── SIZES ──
-const SIZES=['PP','P','M','G','GG','XG','34','36','38','40','42','44'];
+const SIZES=['PP','P','M','G','GG','38','39','40','41','42','43'];
 function buildSizeGrid(id,sel=[]){
   const el=document.getElementById(id); el.innerHTML='';
   SIZES.forEach(s=>{
@@ -63,26 +63,19 @@ const mx=Math.max(...vals),mn=Math.min(...vals);
 const pts=vals.map((v,i)=>[(i/(vals.length-1))*W,H-((v-mn)/(mx-mn))*(H-26)-8]);
 const pd=pts.map((p,i)=>i===0?`M${p[0]},${p[1]}`:`S${p[0]-28},${p[1]} ${p[0]},${p[1]}`).join(' ');
 ce.innerHTML=`<svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="display:block">
-  <defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c9a84c" stop-opacity=".16"/><stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/></linearGradient></defs>
+  <defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#61c94cff" stop-opacity=".16"/><stop offset="100%" stop-color="#4cc956ff" stop-opacity="0"/></linearGradient></defs>
   <path d="${pd} L${W},${H} L0,${H} Z" fill="url(#ag)"/>
-  <path d="${pd}" fill="none" stroke="#c9a84c" stroke-width="2.2" stroke-linecap="round"/>
-  <circle cx="${pts[4][0]}" cy="${pts[4][1]}" r="5" fill="#c9a84c" stroke="white" stroke-width="2"/>
-  <rect x="${pts[4][0]-36}" y="${pts[4][1]-34}" width="80" height="28" rx="5" fill="white" stroke="#e8d88a" stroke-width="1"/>
-  <text x="${pts[4][0]+3}" y="${pts[4][1]-20}" fill="#c9a84c" font-family="Cinzel,serif" font-size="12" font-weight="700">456</text>
+  <path d="${pd}" fill="none" stroke="#4cc95dff" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="${pts[4][0]}" cy="${pts[4][1]}" r="5" fill="#4cc952ff" stroke="white" stroke-width="2"/>
+  <rect x="${pts[4][0]-36}" y="${pts[4][1]-34}" width="80" height="28" rx="5" fill="white" stroke="#92e88aff" stroke-width="1"/>
+  <text x="${pts[4][0]+3}" y="${pts[4][1]-20}" fill="#4cc94cff" font-family="Cinzel,serif" font-size="12" font-weight="700">456</text>
   <text x="${pts[4][0]+3}" y="${pts[4][1]-7}" fill="#999" font-family="Outfit,sans-serif" font-size="10">Pedidos</text>
   <text x="${pts[4][0]-31}" y="${pts[4][1]-7}" fill="#bbb" font-family="Outfit,sans-serif" font-size="9">Mai 2025</text>
 </svg>`;
 
 // ── DATA ──
 const pedidosData=[
-  {prod:'Adidas Ultra boost',id:'#25426',data:'Jan 8, 2022',metodo:'PayPal',cliente:'Bessie Cooper',status:'Delivered',valor:'R$200,00',ini:'BC'},
-  {prod:'Adidas Ultra boost',id:'#25425',data:'Jan 7, 2022',metodo:'Pioneer',cliente:'Jaxon Torres',status:'Canceled',valor:'R$200,00',ini:'JT'},
-  {prod:'Adidas Ultra boost',id:'#25424',data:'Jan 6, 2022',metodo:'Cash',cliente:'Ana Luiza',status:'Delivered',valor:'R$200,00',ini:'AL'},
-  {prod:'Adidas Ultra boost',id:'#25423',data:'Jan 5, 2022',metodo:'PayPal',cliente:'Carlos Mota',status:'Canceled',valor:'R$200,00',ini:'CM'},
-  {prod:'Adidas Ultra boost',id:'#25422',data:'Jan 4, 2022',metodo:'Cash',cliente:'Mariana Costa',status:'Delivered',valor:'R$200,00',ini:'MC'},
-  {prod:'Adidas Ultra boost',id:'#25421',data:'Jan 2, 2022',metodo:'Pioneer',cliente:'Felipe Ramos',status:'Canceled',valor:'R$200,00',ini:'FR'},
-  {prod:'Adidas Ultra boost',id:'#25420',data:'Jan 1, 2022',metodo:'PayPal',cliente:'Beatriz Lima',status:'Delivered',valor:'R$200,00',ini:'BL'},
-  {prod:'Adidas Ultra boost',id:'#25419',data:'Dez 30, 2021',metodo:'Cash',cliente:'Ricardo Nunes',status:'Delivered',valor:'R$200,00',ini:'RN'},
+  {prod:'Adidas Ultra boost',id:'#25426',data:'08/03/2026',metodo:'Cartão',cliente:'Ikaro',status:'Entregue',valor:'R$200,00',ini:'IK'}
 ];
 function sb(s){return s==='Delivered'?'badge-blue':s==='Canceled'?'badge-gold':'badge-gray'}
 
@@ -108,11 +101,7 @@ pag.innerHTML+=`<div class="page-btn" style="padding:0 14px">NEXT ›</div>`;
 
 // ── USERS ──
 let users=[
-  {nome:'Bessie Cooper',email:'bessie@email.com',tel:'(11) 98888-1111',metodo:'PayPal',status:'Delivered'},
-  {nome:'Jaxon Torres',email:'jaxon@email.com',tel:'(11) 97777-2222',metodo:'Pioneer',status:'Canceled'},
-  {nome:'Ana Luiza',email:'ana@email.com',tel:'(21) 96666-3333',metodo:'Cash',status:'Delivered'},
-  {nome:'Carlos Mota',email:'carlos@email.com',tel:'(31) 95555-4444',metodo:'PayPal',status:'Canceled'},
-  {nome:'Mariana Costa',email:'mariana@email.com',tel:'(41) 94444-5555',metodo:'Cash',status:'Delivered'},
+  {nome:'Ikaro',email:'ikarofeio@gmail.com',tel:'(11) 98888-1111',metodo:'Cartão',status:'Entregue'}
 ];
 let editUserIdx=-1;
 
