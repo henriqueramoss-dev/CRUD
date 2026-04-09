@@ -55,8 +55,8 @@ html,body {
 
 /* SIDEBAR */
 .sidebar {
-  width:180px;
-  min-width:180px;
+  width:250px;
+  min-width:250px;
   background:var(--sidebar);
   border-right:1px solid #222;
   display:flex;
