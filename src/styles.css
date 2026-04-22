@@ -1,0 +1,45 @@
+/* RESET + VARIAVEIS */
+*,*::before,*::after {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
+  
+  :root{
+    --bg:#f5f5f5;
+    --sidebar:#141414;
+    --surface:#ffffff;
+    --border:#e8e8e8;
+    --text:#1a1a1a;
+    --text2:#555;
+    --text3:#999;
+    --gold:#25df14;
+    --gold2:#75e86a;
+    --gold-dim:#287a2f;
+    --red:#e05252;
+    --topbar:#ffffff;
+    --radius:10px;
+  }
+  
+  /* BASE */
+  body {
+    font-family:'Outfit', sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+  
+  /* LAYOUT */
+  .app {
+    display:flex;
+    height:100vh;
+  }
+  
+  .main {
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+  
+  .content {
+    padding:24px;
+  }

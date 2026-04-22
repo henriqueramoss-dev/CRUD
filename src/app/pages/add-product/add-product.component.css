@@ -1,0 +1,12 @@
+.form-group {
+    margin-bottom:10px;
+  }
+  
+  input, textarea {
+    width:100%;
+    padding:10px;
+  }
+  
+  button {
+    margin-top:10px;
+  }
