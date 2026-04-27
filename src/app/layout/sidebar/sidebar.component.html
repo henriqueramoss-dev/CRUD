@@ -1,7 +1,32 @@
 <div class="sidebar">
-    <img src="" alt="">
-  
-    <a routerLink="/" routerLinkActive="active">Dashboard</a>
-<a routerLink="/produtos" routerLinkActive="active">Produtos</a>
-<a routerLink="/usuarios" routerLinkActive="active">Usuários</a>
-<a routerLink="/adicionar-produto" routerLinkActive="active">Adicionar Produto</a>
+
+  <div class="logo">
+    <span class="hc">HC</span>
+    <span class="store">STORE</span>
+  </div>
+
+  <nav>
+
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      DASHBOARD
+    </a>
+
+    <a routerLink="/produtos" routerLinkActive="active">
+      TODOS OS PRODUTOS
+    </a>
+
+    <a routerLink="/pedidos" routerLinkActive="active">
+      LISTA DE PEDIDOS
+    </a>
+
+    <a routerLink="/usuarios" routerLinkActive="active">
+      USUARIOS
+    </a>
+
+    <a routerLink="/adicionar-produto" routerLinkActive="active">
+      ADICIONAR PRODUTO
+    </a>
+
+  </nav>
+
+</div>
