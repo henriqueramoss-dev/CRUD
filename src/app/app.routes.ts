@@ -7,7 +7,9 @@ import { UsersComponent } from './pages/users/users.component';
 import { AddProductComponent } from './pages/add-product/add-product.component';
 
 export const routes: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'produtos', component: ProductsComponent },
   { path: 'pedidos', component: OrdersComponent },
   { path: 'usuarios', component: UsersComponent },
