@@ -73,4 +73,6 @@ export class AddProductComponent {
     this.images.splice(index, 1);
   }
 
+  
+
 }
